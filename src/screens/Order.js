@@ -11,7 +11,7 @@ const DATA = Array(10).fill('').map((e, i) => ({
     heart: i % 2 === 0
   }))
 
-export default function Order() {
+export default function order() {
     const renderItem = ({ item }) => (
         <View style={{ width: '45%', }}>
           <Image

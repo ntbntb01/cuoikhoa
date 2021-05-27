@@ -4,6 +4,7 @@ import { View, Text, TouchableOpacity, FlatList, Image, StyleSheet, ScrollView, 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+
 const DATA = Array(10).fill('').map((e, i) => ({
     id: i + 1,
     photo: 'https://soyagarden.com/content/uploads/2019/12/28122019_SOYA1675.jpg',
@@ -11,16 +12,18 @@ const DATA = Array(10).fill('').map((e, i) => ({
     price: '50000',
     heart: i % 2 === 0
   }))
-export default function Home() {
+export default function Home({navigation}) {
     return (
-        <View style ={{marginBottom:90}}>
+        <View style ={{marginBottom:100}}>
         <View style = {{flexDirection:'row',justifyContent:'space-around', height:100,backgroundColor:'yellow'}}>
             <View style={styles.b}>
             <Ionicons style ={styles.a} name ="card-outline" size={25} color="#008000"/>
             </View>
+            <TouchableOpacity onPress={() => navigation.navigate('Order')}>
             <View style={styles.b}>
             <FontAwesome5 style ={styles.a} name ="shipping-fast" size={25} color="#008000"/>
             </View>
+            </TouchableOpacity>
             <View style={styles.b}>
             <Ionicons style ={styles.a} name ="barcode-sharp" size={25} color="#008000"/>
             </View>
