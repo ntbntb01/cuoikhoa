@@ -74,7 +74,7 @@ export default function App() {
         <Tab.Screen name="Gọi Món" component={GoiMon} />
         <Tab.Screen name="Thông báo" component={Notifications} />
         <Tab.Screen name="Khác" component={Other} />
-        <Tab.Screen name="Đăng nhập" component={Login} />
+       
       </Tab.Navigator>
     </NavigationContainer>
   );
